@@ -30,7 +30,9 @@ export default function Home() {
       <QuizBackground backgroundImage = {db.bg}>
         <Head>
           <title> Supernatural Quiz</title>
-          <meta property="og:db.bg" content={db.bg}/>
+          <meta key="og:image"
+            name="og:image"
+            content={db.bg}/>
         </Head>
         <QuizContainer>
         <QuizLogo/>
