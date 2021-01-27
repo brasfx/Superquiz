@@ -5,6 +5,7 @@ import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
 import QuizLogo from '../src/components/QuizLogo'
+import Head from 'next/head'
 
 /*const BackgroundImage = styled.div`
 background-image: url(${db.bg});
@@ -27,6 +28,10 @@ export const QuizContainer = styled.div`
 export default function Home() {
   return(
       <QuizBackground backgroundImage = {db.bg}>
+        <Head>
+          <title> Supernatural Quiz</title>
+          <meta property="og:db.bg" content={db.bg}/>
+        </Head>
         <QuizContainer>
         <QuizLogo/>
         <Widget>
