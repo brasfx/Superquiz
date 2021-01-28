@@ -24,16 +24,17 @@ export const QuizContainer = styled.div`
 export default function Home() {
 const router = useRouter();
 const [username,setUsername] = useState('');
+
+
+
 const handleChange =(event)=>{ 
   setUsername(event.target.value);
   
 };
 const handleSubmit= (event)=>{
   event.preventDefault();
-  
   router.push(`\quiz?name=${username}`);
   console.log(`Enviado o nome ${username}`);
-
 };
 
   return (
