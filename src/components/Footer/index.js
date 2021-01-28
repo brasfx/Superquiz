@@ -26,13 +26,13 @@ const FooterWrapper = styled.footer`
 
 export default function Footer(props) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
+        <img src="https://user-images.githubusercontent.com/22081873/88965749-945da280-d281-11ea-9d7c-f374e0beffce.png" alt="Logo Alura" />
         <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
       </a>
       <p>
-        Orgulhosamente criado durante
+        Orgulhosamente criado por Davi Ribeiro durante
         {' '}
         a
         {' '}
