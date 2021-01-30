@@ -4,7 +4,7 @@
   "description": "Um quiz rápido sobre o mundo do JavaScript",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
+      "image": "https://tenor.com/view/supernatural-dean-huh-scream-gif-8074958.gif",
       "title": "Qual a diferença entre = , == e === ?",
       "description": "Pergunta fácil em!",
       "answer": 1,
@@ -49,12 +49,14 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#222222",
-      "secondary": "#e89c3f",
-      "mainBg": "#213f4e",
+      "primary": "#2980b9",
+      "secondary": "#f1c40f",
+      "mainBg": "#2c3e50",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
-      "success": "#4CAF50"
+      "success": "#4CAF50",
+      "dark": "#222222",
+      "danger": "#e74c3c"
     },
     "borderRadius": "4px"
   }

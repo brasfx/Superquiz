@@ -1,7 +1,4 @@
 import React, { useState,useEffect} from 'react';
-import styled from 'styled-components';
-
-
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
@@ -23,12 +20,18 @@ return(
 }
 
 const QuestionWidget =({question,totalQuestions,questionIndex,onSubmit})=>{
+  const [selectedAlternative, setSelectedAlternative] = useState(undefined);
+  const [isQuestionSubmited,setIsQuestionSubmited] = useState(false);
   const questionId = `question__${questionIndex}`;
+  const isCorrect = selectedAlternative === question.answer;
 
   const handleFormSubmit=(event)=>{
     event.preventDefault();
     onSubmit();
+    setIsQuestionSubmited(true);
+    
   }
+
   return(
     <Widget>
     <Widget.Header>
@@ -50,22 +53,23 @@ const QuestionWidget =({question,totalQuestions,questionIndex,onSubmit})=>{
     <p>
       {question.description}
     </p>
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} >
       {question.alternatives.map((alternative,alternativeIndex)=>{
-          const alternativeId = `alternative__${alternativeIndex}`
-          console.log(alternative);
-          console.log(alternativeIndex);
+          const alternativeId = `alternative__${alternativeIndex}`;
+          
         return(
-          <Widget.Topic htmlFor={alternativeIndex} as='label'>
-            <input id={alternativeId}  name={questionId} type="radio"/>
+          <Widget.Topic htmlFor={alternativeId} as='label' key={alternativeId}>
+            <input id={alternativeId}  name={questionId} type="radio" onChange = {()=> setSelectedAlternative(alternativeIndex)}/>
             {alternative}
           </Widget.Topic>
         )
       })}
-    </form>
-    <Button type="submit">
+      <Button type="submit">
         Confirmar
       </Button>
+      {isQuestionSubmited && isCorrect && <p>Resposta correta.</p>}
+      {isQuestionSubmited && !isCorrect && <p>Resposta incorreta.</p>}
+    </form>
     </Widget.Content>
   </Widget>
   );
@@ -79,7 +83,7 @@ export default function QuizPage() {
     RESULT:'RESULT'
   };
   const totalQuestions = db.questions.length;
-  const [currentQuestion,setCurrentQuestion] = useState('0');
+  const [currentQuestion,setCurrentQuestion] = useState(0);
   const questionIndex = currentQuestion;
   const [screenState,setScreenState] = useState(screenStates.LOADING);
   const question = db.questions[questionIndex];

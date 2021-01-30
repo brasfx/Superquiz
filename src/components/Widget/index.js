@@ -4,7 +4,7 @@ const Widget = styled.div`
  margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.contrastText};
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.dark};
   border-radius: 4px;
   overflow: hidden;
   h1, h2, h3 {
@@ -24,7 +24,7 @@ Widget.Header = styled.header`
   justify-content: flex-start;
   align-items: center;
   padding: 18px 32px;
-  background-color: ${({ theme }) => theme.colors.success};
+  background-color: ${({ theme }) => theme.colors.danger};
   
   * {
     margin: 0;
@@ -50,7 +50,7 @@ Widget.Topic = styled.a`
   outline: 0;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.contrastText};
-  background-color: ${({ theme }) => `${theme.colors.secondary}40`};
+  background-color: ${({ theme }) => `${theme.colors.mainBg}40`};
   padding: 10px 15px;
   margin-bottom: 8px;
   cursor: pointer;
