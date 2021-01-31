@@ -54,8 +54,22 @@ const handleSubmit= (event)=>{
         </Widget>
         <Widget>
           <Widget.Content>
-            <h1>Aqui vão as perguntas do quiz!</h1>
-            <p>Um superquiz para super fãs </p>
+            <h1>Quiz da galera</h1>
+           <ul>
+             {db.external.map((linkExterno)=>{
+               const [projectName,githubUser] = linkExterno.replace(/\//g,'')
+               .replace('https:','')
+               .replace('vercel.app','')
+               .split('.');
+               return(
+                 <li key={linkExterno}>
+                   <Widget.Topic href={linkExterno} target='blank'>
+                     {`${githubUser}/${projectName}`}
+                   </Widget.Topic>
+                 </li>
+               );
+             })}
+           </ul>
           </Widget.Content>
         </Widget>
         <Footer />
