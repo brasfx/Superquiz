@@ -11,6 +11,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
+import Link from '../src/components/Link';
 
 export default function Home() {
 const router = useRouter();
@@ -59,11 +60,12 @@ const handleSubmit= (event)=>{
              {db.external.map((linkExterno)=>{
                const [projectName,githubUser] = linkExterno.replace(/\//g,'')
                .replace('https:','')
-               .replace('vercel.app','')
+               .replace('.vercel.app','')
                .split('.');
                return(
                  <li key={linkExterno}>
-                   <Widget.Topic href={linkExterno} target='blank'>
+                   
+                   <Widget.Topic href={`/quiz/${projectName}___${githubUser}`} target='blank' as={Link}>
                      {`${githubUser}/${projectName}`}
                    </Widget.Topic>
                  </li>
