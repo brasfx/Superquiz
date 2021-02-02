@@ -7,6 +7,7 @@ import Button from '../../components/Button';
 import QuizContainer from '../../components/QuizContainer';
 import Spinner from '../../components/Spinner';
 import AlternativesForm from  '../../components/AlternativesForm';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 const ResultWidget =({results})=>{
   return(
@@ -70,6 +71,7 @@ const QuestionWidget =({question,totalQuestions,questionIndex,onSubmit,addResult
 
   return(
     <Widget>
+    <BackLinkArrow href="/"/>
     <Widget.Header>
       <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
     </Widget.Header>

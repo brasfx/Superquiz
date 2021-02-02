@@ -5,10 +5,15 @@ import QuizBackground from '../../src/components/QuizBackground';
 import QuizLogo from '../../src/components/QuizLogo';
 import Button from '../../src/components/Button';
 import QuizContainer from '../../src/components/QuizContainer';
-import Spinner from '../../src/components/Spinner';
+//import Spinner from '../../src/components/Spinner';
 import AlternativesForm from  '../../src/components/AlternativesForm';
+import BackLinkArrow from '../../src/components/BackLinkArrow';
+import {Lottie} from '@crello/react-lottie'
+
+import loadingAnimation from '../../src/animation/loading.json';
 
 const ResultWidget =({results})=>{
+  
   return(
     <Widget>
       <Widget.Header>
@@ -25,11 +30,12 @@ const ResultWidget =({results})=>{
       {results.filter((x)=>x === true).length}
       {' '}
        pergunta(s)</p>
+      <p>{}</p>
       <ul>
         {results.map((result,index)=>(
         <li key={`result__${index}`}>
            Questão {index +1}: {' '}
-          {result === true ? 'Acertou ' : 'Errou'}
+          {result === true ? ' Acertou ' : ' Errou'}
         </li>
         ))} 
       </ul>
@@ -40,11 +46,18 @@ const ResultWidget =({results})=>{
 
 const LoadingWidget =()=>{
 return(
-  <Widget>
+  <Widget >
     <Widget.Header>
     </Widget.Header>
-    <Widget.Content>
-      <Spinner description='Carregando...' />
+    <Widget.Content style={{display:'flex',flexDirection:'row',alignItems:'center',}}>
+    <Lottie
+          width="100px"
+          height="100px"
+          className="lottie-container basic"
+          config={{ animationData: loadingAnimation, loop: true, autoplay: true }} 
+        />
+        <h1>Carregando....</h1>
+     {/*  <Spinner description='Carregando...' /> */}
     </Widget.Content>    
   </Widget>
 )    
@@ -71,13 +84,14 @@ const QuestionWidget =({question,totalQuestions,questionIndex,onSubmit,addResult
   return(
     <Widget>
     <Widget.Header>
+    <BackLinkArrow href="/"/>
       <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
     </Widget.Header>
     <img
     alt="Descrição"
     style={{
       width: '100%',
-      height: '150px',
+      height: '200px',
       objectFit: 'cover',
     }}
     src={question.image}
@@ -131,7 +145,7 @@ export default function QuizPage() {
   useEffect(()=>{
     setTimeout(()=>{
       setScreenState(screenStates.QUIZ)
-    },2 * 1000);
+    },3 * 1000);
   },[]);
  const handleQuizSubmit =()=>{
    const  nextQuestion = questionIndex + 1;

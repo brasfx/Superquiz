@@ -12,6 +12,7 @@ import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
 import Link from '../src/components/Link';
+import {motion} from 'framer-motion';
 
 export default function Home() {
 const router = useRouter();
@@ -39,7 +40,7 @@ const handleSubmit= (event)=>{
       </Head>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget as={motion.section} transition={{delay:0,duration:0.5}}variants={{show:{opacity:1,y:'0'},hiden:{opacity:0,y:'100%'}}} initial='hiden'animate='show'>
           <Widget.Header>
             <h1>Supernatural</h1>
           </Widget.Header>
@@ -53,19 +54,20 @@ const handleSubmit= (event)=>{
             <p>Teste seus conhecimentos sobre a série Supernatural e divirta compartilhando seu resultado com todos os amigos! </p>
           </Widget.Content>
         </Widget>
-        <Widget>
+        <Widget as={motion.section} transition={{delay:0.5,duration:0.5}}variants={{show:{opacity:1,y:'0'},hiden:{opacity:0,y:'100%'}}} initial='hiden'animate='show'>
           <Widget.Content>
             <h1>Quiz da galera</h1>
            <ul>
              {db.external.map((linkExterno)=>{
-               const [projectName,githubUser] = linkExterno.replace(/\//g,'')
-               .replace('https:','')
-               .replace('.vercel.app','')
-               .split('.');
+                const [projectName, githubUser] = linkExterno
+                .replace(/\//g, '')
+                .replace('https:', '')
+                .replace('.vercel.app', '')
+                .split('.');
                return(
                  <li key={linkExterno}>
                    
-                   <Widget.Topic href={`/quiz/${projectName}___${githubUser}`} target='blank' as={Link}>
+                   <Widget.Topic href={`/quiz/${projectName}___${githubUser}`} as={Link}>
                      {`${githubUser}/${projectName}`}
                    </Widget.Topic>
                  </li>
@@ -74,9 +76,9 @@ const handleSubmit= (event)=>{
            </ul>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer  as={motion.section} transition={{delay:0.8,duration:0.5}}variants={{show:{opacity:1,y:'0'},hiden:{opacity:0,y:'100%'}}} initial='hiden'animate='show'/>
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/brasfx/Superquiz" />
+      <GitHubCorner projectUrl="https://github.com/brasfx" />
     </QuizBackground>
   );
 }

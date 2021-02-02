@@ -4,46 +4,120 @@
   "description": "Um quiz rápido sobre o mundo do JavaScript",
   "questions": [
     {
-      "image": "https://tenor.com/view/supernatural-dean-huh-scream-gif-8074958.gif",
-      "title": "Qual a diferença entre = , == e === ?",
-      "description": "Pergunta fácil em!",
+      "image": "https://tenor.com/view/jensen-ackles-dean-winchester-dean-the-cw-supernatural-gif-9996287.gif",
+      "title": "Qual o nome dos irmãos Winchester ?",
+      "description": "Pergunta fácil hiem!",
       "answer": 1,
       "alternatives": [
-        "São a mesma coisa",
-        "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+        "Samuel e Daniel",
+        "Sam e Dean",
+        "Sammy e Danny",
+        "Alce e Dino"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
-      "title": "Que tipos de dados são suportados em JavaScript?",
+      "image": "https://tenor.com/view/supernatural-castiel-exactly-gif-5990751.gif",
+      "title": "Qual foi a temporada onde se teve a primeira aparição de Castiel?",
       "description": "E agora? Você sabe?",
       "answer": 0,
       "alternatives": [
-        "Number, String, Undefined, Null e Bool.",
-        "Int, String, Undefined, Null e Bool."
+        "Quarta temporada",
+        "Terceira Temporada",
+        "Quinta temporada",
+        "Sétima temporada"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a diferença de window e global?",
-      "answer": 1,
+      "image": "https://tenor.com/view/supernatural-chuck-dont-gif-14099402.gif",
+      "title": "Qual nome os irmãos Winchester usam quando se referem a Deus?",
+      "answer": 2,
       "alternatives": [
-        "São a mesma coisa",
-        "window é o escopo global no browser, e global no node"
+        "Jesus",
+        "Pai de todos",
+        "Chuck",
+        "Gabriel"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a forma antiga de trabalhar com AJAX na Web?",
+      "image": "https://tenor.com/view/supernatural-dean-winchester-jensen-ackles-impala-driving-gif-4866614.gif",
+      "title": "Qual modelo do carro dirigido pelos irmãos Winchester?",
+      "answer": 3,
+      "alternatives": [
+        "Opala",
+        "Monza",
+        "Dodge Charger",
+        "Impala"
+      ]
+    },
+    {
+      "image": "https://tenor.com/view/calvert-alexander-alex-jack-kline-gif-19731784.gif",
+      "title": "A que raça pertence Jack ?",
+      "answer": 2,
+      "alternatives": [
+        "Humano",
+        "Arcanjo",
+        "Nefelim",
+        "Anjo"
+      ]
+    },
+    {
+      "image": "https://tenor.com/view/supernatural-sam-and-dean-threats-youre-dead-bang-gif-14406831.gif",
+      "title": "Qual a maneira correta de se matar um vampiro ?",
+      "answer": 0,
+      "alternatives": [
+        "Cortar a cabeça",
+        "Estaca no coração",
+        "Bala de prata",
+        "Exorcizar"
+      ]
+    },
+    {
+      "image": "https://tenor.com/view/supernatural-jensen-ackles-dean-winchester-dean-spn-gif-7306855.gif",
+      "title": "Respectivamente quais são os maiores medos de Sam e Dean?",
+      "answer": 2,
+      "alternatives": [
+        "Demônios, Vampiros",
+        "Fantasmas, Lobisomens",
+        "Palhaços, Avião",
+        "Leviatãs, Morte"
+      ]
+    },
+    {
+      "image": "https://tenor.com/view/supernatural-dean-winchester-impala-gif-3482520.gif",
+      "title": "Qual o apelido carinhoso Dean usa para se referir ao seu Impala?",
+      "answer": 0,
+      "alternatives": [
+        "Baby",
+        "Betty",
+        "Bonnie",
+        "Love"
+      ]
+    },
+    {
+      "image": "https://tenor.com/view/michael-supernatural-adam-milligan-jake-abel-spoilers-gif-15790821.gif",
+      "title": "Qual o nome do irmão mais novo de Sam e Dean?",
       "answer": 1,
       "alternatives": [
-        "JSONHttpRequest",
-        "XMLHttpRequest",
-        "fetch"
+        "Bobby",
+        "Adam",
+        "Jack",
+        "Michael"
+      ]
+    },
+    {
+      "image": "https://tenor.com/view/j2-jared-padalecki-supernatural-jensen-ackles-dean-gif-11983105.gif",
+      "title": "Quantas temporadas Supernatural teve ao total?",
+      "answer": 2,
+      "alternatives": [
+        "13 temporadas",
+        "14 temporada",
+        "15 temporadas",
+        "16 temporadas"
       ]
     }
   ],
   "external": [
+    "https://aluraquiz-marvel.omariosouto.vercel.app",
     "https://aluraquiz-css.omariosouto.vercel.app/",
     "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
   ],

@@ -11,15 +11,15 @@ export default function QuizDaGaleraPage({dbExterno}) {
 }
 
 export async function getServerSideProps(context) {
-  console.log(context.query);
   const [projectName, githubUser] = context.query.id.split('___');
-  console.log(context.query);
+  /* console.log(context.query);
   console.log('PJName',projectName);
-  console.log('User git',githubUser);
+  console.log('User git',githubUser); */
 
   try {
     const dbExterno = await fetch(`https://${projectName}.${githubUser}.vercel.app/api/db/`)
     .then((respostaDoServer) => {
+      console.log(respostaDoServer);
         if (respostaDoServer.ok) {
           return respostaDoServer.json();
         }
@@ -27,10 +27,10 @@ export async function getServerSideProps(context) {
       })
       .then((respostaConvertidaEmObjeto) =>{
         return respostaConvertidaEmObjeto
+      }).catch((err)=> {
+        console.error('Aqui está seu erro => ',err);
       });
 
-   /*  console.log('dbExterno', dbExterno);
-    console.log('Infos que o Next da para nós', context.query.id); */
     return {
       props: {
         dbExterno,
