@@ -1,12 +1,12 @@
 {
   "bg": "https://sm.ign.com/ign_br/screenshot/default/supernatural-season-15-cast-poster-1420x798_cnnm.jpg",
   "title": "Quiz JavaScript #AluraQuiz",
-  "description": "Um quiz rápido sobre o mundo do JavaScript",
+  "description": "Um mega quiz para mega fãs. Se essa não é a melhor série das últimas decadas, desconheço. RIP hunters :(",
   "questions": [
     {
       "image": "https://tenor.com/view/jensen-ackles-dean-winchester-dean-the-cw-supernatural-gif-9996287.gif",
       "title": "Qual o nome dos irmãos Winchester ?",
-      "description": "Pergunta fácil hiem!",
+      "description": "Pergunta fácil heim!",
       "answer": 1,
       "alternatives": [
         "Samuel e Daniel",
@@ -19,10 +19,10 @@
       "image": "https://tenor.com/view/supernatural-castiel-exactly-gif-5990751.gif",
       "title": "Qual foi a temporada onde se teve a primeira aparição de Castiel?",
       "description": "E agora? Você sabe?",
-      "answer": 0,
+      "answer": 1,
       "alternatives": [
-        "Quarta temporada",
         "Terceira Temporada",
+        "Quarta temporada",
         "Quinta temporada",
         "Sétima temporada"
       ]
@@ -30,6 +30,7 @@
     {
       "image": "https://tenor.com/view/supernatural-chuck-dont-gif-14099402.gif",
       "title": "Qual nome os irmãos Winchester usam quando se referem a Deus?",
+      "description": "Quem sabe, sabe!",
       "answer": 2,
       "alternatives": [
         "Jesus",
@@ -41,6 +42,7 @@
     {
       "image": "https://tenor.com/view/supernatural-dean-winchester-jensen-ackles-impala-driving-gif-4866614.gif",
       "title": "Qual modelo do carro dirigido pelos irmãos Winchester?",
+      "description": "Baby, baby, baby oh!",
       "answer": 3,
       "alternatives": [
         "Opala",
@@ -52,6 +54,7 @@
     {
       "image": "https://tenor.com/view/calvert-alexander-alex-jack-kline-gif-19731784.gif",
       "title": "A que raça pertence Jack ?",
+      "description": "Vixe e agora!?",
       "answer": 2,
       "alternatives": [
         "Humano",
@@ -63,6 +66,7 @@
     {
       "image": "https://tenor.com/view/supernatural-sam-and-dean-threats-youre-dead-bang-gif-14406831.gif",
       "title": "Qual a maneira correta de se matar um vampiro ?",
+      "description": "Easy peasy!",
       "answer": 0,
       "alternatives": [
         "Cortar a cabeça",
@@ -74,6 +78,7 @@
     {
       "image": "https://tenor.com/view/supernatural-jensen-ackles-dean-winchester-dean-spn-gif-7306855.gif",
       "title": "Respectivamente quais são os maiores medos de Sam e Dean?",
+      "description": "Essa é pra matar a pau!",
       "answer": 2,
       "alternatives": [
         "Demônios, Vampiros",
@@ -85,6 +90,7 @@
     {
       "image": "https://tenor.com/view/supernatural-dean-winchester-impala-gif-3482520.gif",
       "title": "Qual o apelido carinhoso Dean usa para se referir ao seu Impala?",
+      "description": "Só existe um amor verdadeiro!",
       "answer": 0,
       "alternatives": [
         "Baby",
@@ -96,6 +102,7 @@
     {
       "image": "https://tenor.com/view/michael-supernatural-adam-milligan-jake-abel-spoilers-gif-15790821.gif",
       "title": "Qual o nome do irmão mais novo de Sam e Dean?",
+      "description": "Irineu, vocẽ não sabe nem eu! ",
       "answer": 1,
       "alternatives": [
         "Bobby",
@@ -107,6 +114,7 @@
     {
       "image": "https://tenor.com/view/j2-jared-padalecki-supernatural-jensen-ackles-dean-gif-11983105.gif",
       "title": "Quantas temporadas Supernatural teve ao total?",
+      "description": "Saudades do que a gente já viveu!",
       "answer": 2,
       "alternatives": [
         "13 temporadas",

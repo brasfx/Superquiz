@@ -13,7 +13,8 @@ import {Lottie} from '@crello/react-lottie'
 import loadingAnimation from '../../src/animation/loading.json';
 
 const ResultWidget =({results})=>{
-  
+  const pontos = results.filter((x)=> x === true).length * 100;
+  const userMsg = pontos >= 800 ? 'Parabéns, você um verdadeiro hunter!' : 'Tá precisando dar uma maratonada heim!'
   return(
     <Widget>
       <Widget.Header>
@@ -29,8 +30,9 @@ const ResultWidget =({results})=>{
       },0)} */} 
       {results.filter((x)=>x === true).length}
       {' '}
-       pergunta(s)</p>
-      <p>{}</p>
+       pergunta(s)!</p>
+      <p>Seu total de pontos são: {pontos} pontos</p>
+      <p>{userMsg}</p>
       <ul>
         {results.map((result,index)=>(
         <li key={`result__${index}`}>
